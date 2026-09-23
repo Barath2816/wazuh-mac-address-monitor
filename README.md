@@ -96,15 +96,19 @@ Wazuh-MAC-Address-Change-Detection/
 
 ### Dashboard
 <img width="1852" height="776" alt="Screenshot 2026-09-19 175850" src="https://github.com/user-attachments/assets/30764d7f-2d1c-4d07-b0cd-f34a2f6ffdf0" />
+<img width="1853" height="802" alt="Screenshot 2026-09-19 175900" src="https://github.com/user-attachments/assets/94c56cd6-3464-40cc-87fc-766d73a6f0f5" />
 
-### Discover
-(Add screenshot)
+### Endpoint
+<img width="1846" height="660" alt="Screenshot 2026-09-19 175615" src="https://github.com/user-attachments/assets/d1e075e4-d11c-4934-99eb-775d674a5623" />
+
 
 ### Email Alert
-(Add screenshot)
+<img width="1506" height="642" alt="Screenshot 2026-09-19 180122" src="https://github.com/user-attachments/assets/fd97174d-75fa-4364-99b1-35098dd7ef6f" />
+
 
 ### Architecture
-(Add screenshot)
+<img width="940" height="1015" alt="image" src="https://github.com/user-attachments/assets/79257675-78a4-40e5-98ad-57465185e2bb" />
+
 
 ---
 
