@@ -1,0 +1,39 @@
+                          +----------------------+
+                          |      Attacker        |
+                          | Uses macchanger tool |
+                          +----------+-----------+
+                                     |
+                                     |
+                                     v
+                          +----------------------+
+                          |     Kali Linux VM    |
+                          |  MAC Monitor Script  |
+                          |    (Python Script)   |
+                          +----------+-----------+
+                                     |
+                  Detects MAC Address Change
+                                     |
+                                     v
+                          +----------------------+
+                          | Generates JSON Event |
+                          | mac_monitor.log      |
+                          +----------+-----------+
+                                     |
+                                     |
+                          Wazuh Agent reads log
+                                     |
+                                     v
+                    +-------------------------------+
+                    |       Wazuh Manager           |
+                    | Ubuntu Server                |
+                    | - Custom Rules               |
+                    | - Alert Generation           |
+                    +--------------+---------------+
+                                   |
+                +------------------+------------------+
+                |                                     |
+                v                                     v
+      +---------------------+             +----------------------+
+      | Wazuh Dashboard     |             | Email Notification   |
+      | OpenSearch Dashboard|             | Gmail (SMTP)         |
+      +---------------------+             +----------------------+

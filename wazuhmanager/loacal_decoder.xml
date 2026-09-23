@@ -1,0 +1,45 @@
+<decoder name="mac_monitor">
+    <prematch>EVENT=MAC_ADDRESS_CHANGED</prematch>
+</decoder>
+
+<!-- Child decoder -->
+<decoder name="mac_monitor_fields">
+    <parent>mac_monitor</parent>
+    <regex>HOST=(\S+) USER=(\S+) INTERFACE=(\S+) PERMANENT_MAC=(\S+) OLD_MAC=(\S+) NEW_MAC=(\S+) VENDOR=(\S+) RANDOMIZED=(\S+) CHANGE_COUNT=(\d+) EVENT=(\S+)</regex>
+    <order>hostname,mac_user,interface,permanent_mac,old_mac,new_mac,vendor,randomized,change_count,event</order>
+</decoder>
+
+<!-- Investigation Report Decoder -->
+<decoder name="mac_investigation">
+    <prematch>MAC ADDRESS CHANGE INVESTIGATION</prematch>
+</decoder>
+
+<decoder name="mac_investigation_hostname">
+    <parent>mac_investigation</parent>
+    <regex>Hostname\s+:\s+(\S+)</regex>
+    <order>hostname</order>
+</decoder>
+
+<decoder name="mac_investigation_user">
+    <parent>mac_investigation</parent>
+    <regex>User\s+:\s+(\S+)</regex>
+    <order>mac_user</order>
+</decoder>
+
+<decoder name="mac_investigation_interface">
+    <parent>mac_investigation</parent>
+    <regex>Interface\s+:\s+(\S+)</regex>
+    <order>interface</order>
+</decoder>
+
+<decoder name="mac_investigation_old">
+    <parent>mac_investigation</parent>
+    <regex>Old MAC\s+:\s+(\S+)</regex>
+    <order>old_mac</order>
+</decoder>
+
+<decoder name="mac_investigation_new">
+    <parent>mac_investigation</parent>
+    <regex>New MAC\s+:\s+(\S+)</regex>
+    <order>new_mac</order>
+</decoder>

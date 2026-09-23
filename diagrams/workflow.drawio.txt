@@ -1,0 +1,39 @@
+                START
+                  │
+                  ▼
+      Read Current MAC Address
+                  │
+                  ▼
+     Compare with Previous MAC
+                  │
+        ┌─────────┴─────────┐
+        │                   │
+        │ No Change         │
+        ▼                   ▼
+ Continue Monitoring   MAC Changed
+                            │
+                            ▼
+             Collect Network Information
+                            │
+                            ▼
+           Generate JSON Log Event
+                            │
+                            ▼
+      Save Event to mac_monitor.log
+                            │
+                            ▼
+      Wazuh Agent Reads Log File
+                            │
+                            ▼
+      Wazuh Manager Applies Rules
+                            │
+                            ▼
+        Generate Security Alert
+                            │
+            ┌───────────────┴──────────────┐
+            ▼                              ▼
+   Display on Dashboard            Send Email Alert
+            │                              │
+            └───────────────┬──────────────┘
+                            ▼
+                           END

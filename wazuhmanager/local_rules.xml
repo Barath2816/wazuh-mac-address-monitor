@@ -1,0 +1,41 @@
+<group name="local,mac_monitor,">
+
+  <rule id="100500" level="10">
+    <decoded_as>mac_monitor</decoded_as>
+    <description>MAC Address Changed</description>
+    <group>mac_change,network</group>
+    <mitre>
+      <id>T1036</id>
+    </mitre>
+  </rule>
+
+</group>
+
+<group name="mac_investigation,json">
+
+  <rule id="100510" level="8">
+    <decoded_as>json</decoded_as>
+    <field name="event">MAC_INVESTIGATION</field>
+
+    <description>MAC Investigation Report Generated</description>
+
+    <group>mac_monitor,investigation,forensics</group>
+
+    <mitre>
+      <id>T1036</id>
+    </mitre>
+  </rule>
+
+<rule id="100515" level="10">
+    <if_sid>100500</if_sid>
+
+    <description>MAC Address Changed</description>
+
+    <group>mac_spoofing,security_event,</group>
+
+    <mitre>
+        <id>T1036</id>
+    </mitre>
+</rule>
+
+</group>
