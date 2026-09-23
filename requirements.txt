@@ -1,0 +1,4 @@
+psutil
+netifaces
+
+# This project uses only Python standard library modules.
