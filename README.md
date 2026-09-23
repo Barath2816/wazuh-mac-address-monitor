@@ -95,7 +95,7 @@ Wazuh-MAC-Address-Change-Detection/
 ## Screenshots
 
 ### Dashboard
-(Add screenshot)
+<img width="1852" height="776" alt="Screenshot 2026-09-19 175850" src="https://github.com/user-attachments/assets/30764d7f-2d1c-4d07-b0cd-f34a2f6ffdf0" />
 
 ### Discover
 (Add screenshot)
